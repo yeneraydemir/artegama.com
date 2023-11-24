@@ -1,0 +1,219 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    place-content: center;
+  }
+  /* TypeWriter */
+
+
+  .changing-text {
+    margin-right: 10px; /* Metin ile çizgi arasındaki boşluğu buradan ayarlayabilirsiniz */
+    z-index: 9999;
+  }
+
+  .blinking-line {
+    position: absolute;
+    height: 30px;
+    width: 2px; /* Çizgi kalınlığını buradan ayarlayabilirsiniz */
+    background-color: #333; /* Çizgi rengini buradan ayarlayabilirsiniz */
+    animation: blink 2s infinite; /* Yanıp sönme animasyonu, süreyi buradan ayarlayabilirsiniz */
+    animation-delay: 1s; /* Yanıp sönme animasyonu başlangıç gecikmesi, süreyi buradan ayarlayabilirsiniz */
+  }
+
+  @keyframes blink {
+    0%, 50%, 100% {
+      opacity: 1;
+    }
+    25%, 75% {
+      opacity: 0;
+    }
+  }
+
+  /* TypeWriter Bitti */
+  /* Alt W3 */
+  body, html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+  }
+  
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+  .bgimg-1 {
+    background-image: url("https://www.w3schools.com/howto/img_parallax.jpg");
+    min-height: 100%;
+  }
+  
+  .bgimg-2 {
+    background-image: url("https://www.w3schools.com/howto/img_parallax2.jpg");
+    min-height: 400px;
+  }
+  
+  .bgimg-3 {
+    background-image: url("https://www.w3schools.com/howto/img_parallax3.jpg");
+    min-height: 400px;
+  }
+  
+  .caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+  }
+  
+  .caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+  }
+  
+  h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #111;
+  }
+  
+  /* Turn off parallax scrolling for tablets and phones */
+  @media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+      background-attachment: scroll;
+    }
+  }
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    to {
+        border-color: transparent;
+    }
+}
+
+@keyframes backspace {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+
+
+/* Buton */
+.buttonfoot {
+  --color: #00A97F;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+ }
+ 
+ .buttonfoot::before, .buttonfoot::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .buttonfoot::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .buttonfoot::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .buttonfoot:hover::before, .buttonfoot:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .buttonfoot:hover {
+  color: rgb(10, 25, 30);
+ }
+ 
+ .buttonfoot:active {
+  filter: brightness(.8);
+ }
+ /* Buton-2 */
+ .buttoniki {
+  height: 50px;
+  width: 200px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #252525;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #333;
+  transition: all 0.5s ease-in-out;
+}
+
+.btniki-txt {
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.type1iki::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #333;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+
+.buttoniki:hover {
+  box-shadow: 1px 1px 200px #252525;
+  color: #fff;
+  border: none;
+}
+
+.type1iki:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}
