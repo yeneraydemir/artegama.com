@@ -172,10 +172,10 @@
   position: relative;
   background-color: transparent;
   cursor: pointer;
-  border: 2px solid #252525;
+  border: 2px solid #cdcbcb;
   overflow: hidden;
   border-radius: 30px;
-  color: #333;
+  color: #cdcbcb;
   transition: all 0.5s ease-in-out;
 }
 
@@ -191,7 +191,7 @@
   left: 0;
   top: 0;
   transition: all 0.5s ease-in-out;
-  background-color: #333;
+  background-image:linear-gradient(247deg,#dc79ff,#256bfa);
   border-radius: 30px;
   visibility: hidden;
   height: 10px;
@@ -200,7 +200,7 @@
 }
 
 .buttoniki:hover {
-  box-shadow: 1px 1px 200px #252525;
+  box-shadow: 1px 1px 170px #fffafa;
   color: #fff;
   border: none;
 }
@@ -208,4 +208,21 @@
 .type1iki:hover::after {
   visibility: visible;
   transform: scale(100) translateX(2px);
+}
+
+.rainbowtext {
+  background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.margint5 {
+  margin-top: 50px;
+}
+
+.jumbotronparoller {
+background:hsla(0,0%,100%,.05);
+padding:2.5em;
+margin:2em auto;
+min-height:400px;
 }
