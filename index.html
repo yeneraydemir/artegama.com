@@ -12,8 +12,8 @@
 <body>
     <!-- Navbar -->
          <nav class="blur-1xl border-gray-200">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+            <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-gray-800">Artegama</span>
         </a>
@@ -75,20 +75,83 @@
               <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-gray-800 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Hakkımızda</a>
             </li>
             <li>
-              <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-gray-800 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Hizmetlerimiz</a>
-            </li>
-            <li>
               <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-gray-800 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog</a>
             </li>
             <li>
               <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-gray-800 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">İletişim</a>
             </li>
+            <li>
+              <div class="dropdown inline-block relative">
+              <button id="mega-menu-full-cta-image-button" data-collapse-toggle="mega-menu-full-image-dropdown" class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 border-b border-gray-100 md:w-auto md:border-0 md:hover:text-blue-600 md:p-0">Hizmetlerimiz
+              <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg>
+            </button>
+            </li>
           </ul>
         </div>
-        </div>
-      </nav>
+      </div>
+    <div id="mega-menu-full-image-dropdown" class="mt-1 bg-white border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600">
+    <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-gray-500 dark:text-gray-400 md:grid-cols-3 md:px-6">
+      <ul class="hidden mb-4 space-y-4 md:mb-0 md:block" aria-labelledby="mega-menu-full-image-button">
+          <li>
+              <a href="#" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  Online Stores
+              </a>
+          </li>
+          <li>
+              <a href="#" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  Segmentation
+              </a>
+          </li>
+          <li>
+              <a href="#" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  Marketing CRM
+              </a>
+          </li>
+          <li>
+              <a href="#" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  Online Stores
+              </a>
+          </li>
+      </ul>
+      <ul class="mb-4 space-y-4 md:mb-0">
+          <!-- <li>
+              <a href="#" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  Our Blog
+              </a>
+          </li>
+          <li>
+              <a href="#" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  Terms & Conditions
+              </a>
+          </li>
+          <li>
+              <a href="#" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  License
+              </a>
+          </li>
+          <li>
+              <a href="#" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  Resources
+              </a>
+          </li> -->
+      </ul>
+      <a href="#" class="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light dark:hover:bg-blend-darken" style="background-image: url(/docs/images/dashboard-overview.png)">
+          <p class="max-w-xl mb-5 font-extrabold leading-tight tracking-tight text-white">Preview the new Flowbite dashboard navigation.</p>
+          <button type="button" class="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700">
+              Get started
+              <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+         </button>
+        </a>
+      </div>
+     </div>
+    </ul>
+  </div>
+  </div>
+</nav>
       <!-- Navbar Bitti -->      
-
       <!-- Content -->
       <!-- <iframe src='https://my.spline.design/3dtextbluecopy-79b53b6ecc49b9c7f5347fac480611ac/' frameborder='0' width='100%' height='600px'></iframe> -->
       <!-- 1 -->
@@ -101,18 +164,7 @@
     </div>
     <div class="text-center">
       <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Artegama İle Uzman Web Çözümleri</h2>
-      <p class="mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
-      <h6 class="mega my-element mt-6 text-lg leading-8 text-gray-600"
-      data-paroller-factor="0.5"
-      data-paroller-factor-lg="0.4"
-      data-paroller-factor-md="0.3"
-      data-paroller-factor-sm="-0.2"
-      data-paroller-factor-xs="-0.1"
-      data-paroller-type="foreground"
-      data-paroller-direction="horizontal"
-      data-paroller-transition="transform .2s linear">
-      Ben yener aydemir</h6>
-      <div class="mt-10 flex items-center justify-center gap-x-6">
+         <div class="mt-10 flex items-center justify-center gap-x-6">
       </div>
     </div>
   </div>
@@ -127,7 +179,7 @@ style="background: url('images/artegamimg3.png') no-repeat center; background-si
 data-paroller-factor="0.5"
 data-paroller-factor-xs="0.2"
 >
-<h4 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-center margint5"><span style="background-image: linear-gradient(to right,#083d77,#581070);color: transparent;-webkit-background-clip: text;">Art</span>egama</h4>
+<h4 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-center margint5"><span style="background-image: linear-gradient(to right,#083d77,#581070);color: transparent;-webkit-background-clip: text;">Art</span>egama Neler Yapıyor</h4>
 </div>
 <!-- 2 -->
 <div class="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
@@ -451,7 +503,6 @@ data-paroller-factor-xs="0.2"
           });
       });
 </script>
-
 </body>
 </html>
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Menu Example</title>
+</head>
+<style>
+    /* Özel CSS Kuralları */
+.group:hover .absolute {
+  display: block;
+}
+
+/* İsteğe bağlı olarak dropdown menüyü daha güzel göstermek için özel stiller ekleyebilirsiniz. Örneğin: */
+.absolute {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+<body>
+    <nav class="bg-gray-800 p-4">
+        <div class="flex items-center justify-between">
+          <div class="text-white">Logo</div>
+          <ul class="flex space-x-4">
+            <li class="hover:text-gray-300">Anasayfa</li>
+            <li class="group relative">
+              <div class="hover:text-gray-300 cursor-pointer">Dropdown</div>
+              <div class="absolute hidden bg-white p-2 space-y-2 group-hover:block">
+                <a href="#" class="block">Dropdown Öğe 1</a>
+                <a href="#" class="block">Dropdown Öğe 2</a>
+              </div>
+            </li>
+            <li class="hover:text-gray-300">Hakkında</li>
+            <li class="hover:text-gray-300">İletişim</li>
+          </ul>
+        </div>
+      </nav>      
+</body>
+
+</html>
